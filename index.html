@@ -17,7 +17,8 @@
     <div class="justify-content-center align-items-center d-flex pb-5">
         <h1>Bienvenue sur le site de Jaster Blade</h1>
     </div>
-    <div class="d-flex mx-5 justify-content-center align-items-center">
+
+    <div class="d-flex mx-5 justify-content-center align-items-center pb-5">
         <p>
             CECI EST JUSTE UNE ECRITURE UN PEU AU  PIF POUR REMPLIR
             <br>
@@ -25,6 +26,30 @@
             Rejoignez sa communauté pour des moments de divertissement, des discussions passionnantes et des mises à jour exclusives. 
             Suivez Jaster Blade pour ne rien manquer de ses activités et de son contenu captivant !
         </p>
+    </div>
+
+    <div class="d-flex mx-5 justify-content-center align-items-center">
+        <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element. -->
+        <script type="text/javascript">
+            var embed = new Twitch.Embed("twitch-embed", {
+                width: 400,
+                height: 300,
+                channel: "jaster__blade",
+                layout: "video",
+                autoplay: false,
+            });
+
+            embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                var player = embed.getPlayer();
+                player.play();
+            });
+        </script>
     </div>
     
 
