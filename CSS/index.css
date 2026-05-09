@@ -1,0 +1,11 @@
+@media (min-width: 991.99px) {
+    #twitch_embed_other {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #twitch_embed_pc {
+        display: none;
+    }
+ }
